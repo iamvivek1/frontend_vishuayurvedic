@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Carousel</title>
+    <link rel="stylesheet" href="./carasoul.css">
+    
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-slide fade">
+            <img src="./assets/images/counter/counter-banner.jpg" alt="Image 1">
+        </div>
+
+        <div class="carousel-slide fade">
+            <img src="./assets/images/counter/counter-banner.jpg" alt="Image 2">
+        </div>
+
+        <div class="carousel-slide fade">
+            <img src="./assets/images/counter/counter-banner.jpg" alt="Image 3">
+        </div>
+
+        <div class="carousel-slide fade">
+            <img src="./assets/images/counter/counter-banner.jpg" alt="Image 4">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <script src="./corosoul.js"></script>
+
+   
+
+</body>
+</html>

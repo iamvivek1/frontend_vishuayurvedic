@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Ayurvedic Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/bootsnav.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <style>
+        /* Custom styles from category page */
+        body {
+            font-family: 'Inter', sans-serif; /* Example font */
+            margin: 0; /* Ensure no default body margin */
+            background-color: #f4f4f4; /* Match footer body background or adjust */
+        }
+        .bg-theme-1 {
+            background-color: #f0fdf4; /* A light green, adjust as needed */
+        }
+        .bg-theme-2 {
+            background-color: #fefce8; /* A light yellow, adjust as needed */
+        }
+        .explore-rating {
+            color: #f59e0b; /* Amber color for ratings */
+        }
+        .close-btn { /* Basic styling for buttons, can be enhanced */
+            padding: 0.375rem 0.75rem; /* Slightly reduced padding */
+            border-radius: 0.375rem; /* rounded-md */
+            color: white;
+            font-weight: 600; /* semibold */
+            font-size: 0.875rem; /* text-sm for button text */
+            transition: background-color 0.3s ease-in-out;
+        }
+        .close-btn.bg-green-600:hover {
+            background-color: #15803d; /* darker green on hover */
+        }
+         .close-btn.bg-yellow-500:hover {
+            background-color: #ca8a04; /* darker yellow on hover */
+        }
+        .single-explore-item {
+            border: 1px solid #e5e7eb; /* gray-200 */
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow: hidden; /* Ensures image corners are rounded if img is direct child */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Make cards in a row equal height */
+            /* Added transitions for hover effects */
+            transition-property: transform, box-shadow, opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            opacity: 0.95; /* Slightly faded out by default */
+        }
+
+        .single-explore-item:hover {
+            transform: translateY(-8px); /* Lifts the card up slightly */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        .single-explore-img img {
+            width: 100%;
+            height: 280px; /* Increased image height for more visibility */
+            object-fit: cover; /* Ensures image covers the area, might crop */
+        }
+        .single-explore-txt {
+            padding: 0.75rem; /* Reduced padding for a more compact text area */
+            flex-grow: 1; /* Allows text content to expand */
+            display: flex;
+            flex-direction: column;
+        }
+        .single-explore-txt h2 a {
+            font-size: 1.125rem; /* text-lg, slightly reduced */
+            font-weight: 600; /* semibold */
+            color: #1f2937; /* gray-800 */
+            margin-bottom: 0.25rem; /* Added some space below title */
+        }
+        .single-explore-txt h2 a:hover {
+            text-decoration: underline;
+        }
+        .explore-rating-price {
+            margin-top: 0.25rem; /* Reduced margin */
+            margin-bottom: 0.25rem; /* Reduced margin */
+            font-size: 0.75rem; /* text-xs, reduced font size */
+            color: #4b5563; /* gray-600 */
+        }
+        .explore-price {
+            font-weight: 700; /* bold */
+            color: #166534; /* green-700 */
+        }
+        .explore-person p {
+            font-size: 0.8rem; /* Slightly reduced font size for description */
+            color: #374151; /* gray-700 */
+            margin-top: 0.5rem; /* Reduced margin */
+            flex-grow: 1;
+            line-height: 1.4; /* Adjusted line height for readability */
+        }
+        .explore-open-close-part {
+            margin-top: auto; /* Pushes buttons to the bottom */
+            padding-top: 0.75rem; /* Reduced padding */
+        }
+        .explore-map-icon a {
+            margin-left: 0.5rem;
+            color: #ef4444; /* red-500 for heart icon */
+        }
+        .explore-map-icon a:hover {
+            color: #dc2626; /* red-600 */
+        }
+
+        /* --- Footer Styles (Further Reduced Size) --- */
+        footer {
+            width: 100%;
+            background-color: #333; /* Dark background for the footer */
+            color: #fff; /* White text color */
+        }
+
+        /* Social Links Section */
+        .footer-social {
+            background-color: #222; /* Slightly darker background for social links */
+            padding: 8px 0; /* Further reduced vertical padding */
+            text-align: center;
+        }
+
+        .footer-social a {
+            color: #fff; /* White link color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 4px; /* Further reduced space between social links */
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+            font-size: 11px; /* Further reduced font size for social text */
+        }
+
+        .footer-social a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        /* Font Awesome content codes - Ensure these match the Font Awesome version */
+        .footer-social .fab { /* Using generic fab class for Font Awesome */
+            font-size: 14px; /* Further reduced icon size */
+        }
+
+
+        .text-size-30 {
+            /* This class is still present but overridden by .footer-social .fab for icons */
+            font-size: 14px; /* Further reduced size */
+        }
+
+        .text-strong {
+            font-weight: bold;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        /* Main Footer Section */
+        .section-small-padding {
+            padding: 12px 0; /* Further reduced vertical padding */
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .line {
+            max-width: 1200px; /* Max width for content */
+            margin: 0 auto; /* Center the content */
+            padding: 0 8px; /* Further reduced horizontal padding */
+        }
+
+        .margin {
+            display: flex; /* Use flexbox for columns */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            margin: 0 -8px; /* Counteract column padding */
+        }
+
+        /* Column Styling (Basic Grid) */
+        .s-12 { width: 100%; padding: 0 8px; box-sizing: border-box; } /* Small screens: full width */
+        .margin-m-bottom-30 { margin-bottom: 10px; } /* Further reduced margin for medium screens and below */
+
+        /* Medium screens */
+        @media (min-width: 768px) {
+            .m-12 { width: 100%; padding: 0 8px; box-sizing: border-box; }
+             /* Remove bottom margin on medium screens for the last column */
+            .margin > .m-12:last-child { margin-bottom: 0; }
+        }
+
+        /* Large screens */
+        @media (min-width: 992px) {
+            .l-4 { width: calc(100% / 3); padding: 0 8px; box-sizing: border-box; } /* Large screens: 3 columns */
+             /* Remove bottom margin on large screens for all columns */
+            .margin > .l-4 { margin-bottom: 0; }
+        }
+
+        .text-size-16 {
+            font-size: 13px; /* Further reduced font size */
+            margin-bottom: 4px; /* Further reduced space below headings */
+        }
+
+        .text-size-14 {
+            font-size: 11px; /* Further reduced font size */
+            line-height: 1.3; /* Adjusted line height */
+        }
+
+        /* Separator Line */
+        .break {
+            width: 100%;
+            height: 1px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1); /* Light line color */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Bottom Footer Section */
+        .padding {
+             padding: 8px 0; /* Further reduced vertical padding */
+        }
+
+        .text-size-12 {
+            font-size: 9px; /* Further reduced font size */
+            color: rgba(255, 255, 255, 0.7); /* Slightly lighter text for copyright */
+        }
+
+        /* Hide classes for responsiveness */
+        @media (max-width: 767px) {
+            .hide-s { display: none !important; }
+        }
+
+        @media (max-width: 991px) {
+            .hide-m { display: none !important; }
+        }
+
+         /* Ensure icons are visible on small/medium screens */
+         @media (max-width: 991px) {
+             .footer-social a i {
+                 margin: 0 !important; /* Remove margin from icons on smaller screens */
+                 font-size: 18px; /* Slightly larger icons on small/medium screens */
+             }
+             .footer-social a {
+                  margin: 0 4px; /* Reduce space between social links on smaller screens */
+             }
+         }
+
+    </style>
+</head>
+<body>
+
+    <section class="top-area">
+        <div class="col-sm-3">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/logo/vishnu.png" alt="#" style="height: 50px;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore" class="explore py-12">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-10">
+                <h2 class="text-4xl font-bold text-gray-800">Explore Our Products</h2>
+                <p class="text-lg text-gray-600 mt-2">Checkout our Products which are 100% authentic and Ayurvedic</p>
+            </div>
+
+            <div class="mb-6">
+                <input type="text" id="medicineSearch" placeholder="Search for medicines..."
+                       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/sugarnashak.jpg" alt="Vishnu Sugar Nashak" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-1">
+                        <h2><a href="#">Vishnu Sugar Nashak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★★</span> <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D76W1JRH" class="text-blue-600 hover:underline"> 10 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹1,549 </span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Powder</a>
+                        </p>
+                        <div class="explore-person">
+                            <p>
+                                Vishnu Sugar Nashak: Within five days of starting this, your blood sugar will start decreasing and will be controlled in two months. It has no side effects. It is made from 100 percent pure natural herbs and is completely safe.
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-green-600" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Ayurvedic-Management/dp/B0D76W1JRH/ref=sr_1_1?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-1&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D76W1JRH" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/painoil.jpeg" alt="Vishnu Dard Oil" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-2">
+                        <h2><a href="#">Vishnu Dard Oil</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★☆</span> <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7SQNSCS" class="text-blue-600 hover:underline"> 8 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹400</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Oil</a>
+                        </p>
+                        <div class="explore-person">
+                            <p>
+                                Dard Nashak Oil is a 100% Ayurvedic oil for knee, neck, back, and shoulder pain relief. Made from natural ingredients, it reduces inflammation and stiffness in muscles.
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-yellow-500" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Ayurvedic-Shoulder/dp/B0D7SQNSCS/ref=sr_1_4?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-4&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7SQNSCS" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/fatnashak.jpg" alt="Vishnu Fat Nashak" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-2">
+                        <h2><a href="#">Vishnu Fat Nashak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★☆</span> <a href="https://www.amazon.in/review/create-review/edit?ie=UTF8&channel=glance-detail&asin=B0D7S8KCHW" class="text-blue-600 hover:underline"> 8 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price"> ₹1,800</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Powder</a>
+                        </p>
+                        <div class="explore-person">
+                             <p>
+                                The well-researched formulation of Vishnu Fat Nashak increases your metabolism, cleanses your colon, detoxifies your system and not only reduces obesity but at the same time prevents more fat from accumulating in your system.
+                             </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-green-600" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Anti-Oxidants-Management/dp/B0D7S8KCHW/ref=sr_1_5?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-5&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/edit?ie=UTF8&channel=glance-detail&asin=B0D7S8KCHW" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/kabz nashak.jpg" alt="Vishnu Kabz Nashak" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-2">
+                        <h2><a href="#">Vishnu Kabz Nashak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★☆</span>
+                            <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7BTW159" class="text-blue-600 hover:underline"> 8 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹400</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Powder</a>
+                        </p>
+                        <div class="explore-person">
+                            <p>
+                                The well-researched, unique formulation of Vishnu Gas & Kabz Nashak helps to regulate digestion and improve metabolism. It relieves constipation, flushes out body toxins, cleanses colon and purifies the blood thus protecting you from various discomforts like abdominal pain and bloating, feeling full after eating only a small amount of food, belching, nausea, vomiting, anxiety, headache etc. It helps to strengthen your immune system and improve digestive health.
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-yellow-500" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Constipation-Preservatives/dp/B0D7BTW159/ref=sr_1_12?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-12&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7BTW159" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore//narishakti.jpeg" alt="Vishnu Nari Shakti" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-1">
+                        <h2><a href="#">Vishnu Nari Shakti</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★★</span>
+                            <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0F6D32DH6" class="text-blue-600 hover:underline"> 10 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price"> ₹1,095</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Syrup</a>
+                        </p>
+                        <div class="explore-person">
+                             <p>
+                                The well-researched powerful formulation of natural herbal ingredients in Vishnu Naari Shakti take care in balancing the harmones and heal you internally thus making you look fresh, energetic and beautiful. This medicine also improves your body shape and keeps your skin healthy and glowing, thus making you feel rejuvenated, peaceful and confident.
+                             </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-green-600" onclick="window.location.href='https://www.amazon.in/Ayurvedic-Menstrual-Hormonal-Reproductive-Wellness/dp/B0F6D32DH6/ref=sr_1_3?crid=19R2RRXRGA6C4&dib=eyJ2IjoiMSJ9.ZTl46id-24BbtTOpLCypI1q1SFyn2kMQ5RjezjX0ozdUZRKRuwOsKw06uYLg-FzuguATXnI-RIxIXxJHSGYD-ZY9g2IXvYrgRxjz5pvumFBR_aZf4gap8BRvJLZJwH263lXUl33C_dq9cSObmykDsz_3ISnYDTpbNWl1FxPXkJk6h10jScAPas__lVE6xrlFiMBM90aA6UTn99MYXdGfP42k1BFsrvrf2aVhtlslFahuQL4MlUdtHPzTfdFBdWW0QNgMIGtMW0jWKaC8uBPHOH2zerFqwoF1AUqnuJ31w08.Ts6n1iBFNsd9YH4vlXbrC6u5VyAdv8Asz40Jj5rW5LM&dib_tag=se&keywords=vishnu+shakti+vardhak&qid=1746855202&s=hpc&sprefix=vishnu+shakti+vardhak%2Chpc%2C216&sr=1-3'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0F6D32DH6" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/raktvardhak.jpg" alt="Vishnu Rakt Vardhak" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-2">
+                        <h2><a href="#">Vishnu Rakt Vardhak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★☆</span>
+                            <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7QVTX78" class="text-blue-600 hover:underline"> 8 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹800</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Syrup</a>
+                        </p>
+                        <div class="explore-person">
+                            <p>
+                                Promotes healthy and glowing skin , Acts as a blood purifier and liver tonic,Clears the stomach and aids digestion.Improves blood circulation throughout the body .Supports natural detoxification processes
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-yellow-500" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-raktvardhak-circulation/dp/B0D7QVTX78/ref=sr_1_11?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-11&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7QVTX78" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/kayarakshak.jpg" alt="Vishnu Kaya Rakshak" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-2">
+                        <h2><a href="#">Vishnu Kaya Rakshak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★★☆</span>
+                            <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7QFZLSQ" class="text-blue-600 hover:underline"> 8 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹1,300</span>
+                            </span>
+                            <a href="#" class="text-gray-500 ml-2">Powder</a>
+                        </p>
+                        <div class="explore-person">
+                            <p>
+                                he well-researched powerful formulation of natural ingredients in Vishnu Kaya Rakshak act as a shield to give protection against various degenerative diseases like diabetes, high B. P., high cholesterol, aliments of the heart, thyroid, pain in legs etc. and provides strength, vigour and vitality for a healthy life. Its stress-relieving properties refresh your body and calm the nerves.
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-yellow-500" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Endurance-Increase/dp/B0D7QFZLSQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-2&th=1'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0D7QFZLSQ" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="single-explore-item">
+                    <div class="single-explore-img">
+                        <img src="./assets/images/explore/shaktivardhak.jpg" alt="Vishnu Shakti Vardhak Placeholder" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/757575?text=Image+Not+Found';">
+                    </div>
+                    <div class="single-explore-txt bg-theme-1">
+                        <h2><a href="#">Vishnu Shakti Vardhak</a></h2>
+                        <p class="explore-rating-price">
+                            <span class="explore-rating">★★★☆☆</span> <a href="#" class="text-blue-600 hover:underline"> 5 ratings</a>
+                            <span class="explore-price-box">
+                                form
+                                <span class="explore-price">₹750</span> </span>
+                            <a href="#" class="text-gray-500 ml-2">Powder</a> </p>
+                        <div class="explore-person">
+                            <p>
+                                Vishnu Shakti Vardhak has been prepared from natural secret herbs which were prescribed by Rishis and used by kings and nawabs of ancient India. These when consumed increase your sex power and cure sexual dysfunction making your life healthy and healthy. Vishnu Sha
+                            </p>
+                        </div>
+                        <div class="explore-open-close-part mt-4">
+                            <div class="flex justify-between items-center">
+                                <button class="close-btn bg-green-600" onclick="window.location.href='https://www.amazon.in/Ayurvedic-Menstrual-Hormonal-Reproductive-Wellness/dp/B0F6D32DH6/ref=sr_1_3?crid=19R2RRXRGA6C4&dib=eyJ2IjoiMSJ9.ZTl46id-24BbtTOpLCypI1q1SFyn2kMQ5RjezjX0ozdUZRKRuwOsKw06uYLg-FzuguATXnI-RIxIXxJHSGYD-ZY9g2IXvYrgRxjz5pvumFBR_aZf4gap8BRvJLZJwH263lXUl33C_dq9cSObmykDsz_3ISnYDTpbNWl1FxPXkJk6h10jScAPas__lVE6xrlFiMBM90aA6UTn99MYXdGfP42k1BFsrvrf2aVhtlslFahuQL4MlUdtHPzTfdFBdWW0QNgMIGtMW0jWKaC8uBPHOH2zerFqwoF1AUqnuJ31w08.Ts6n1iBFNsd9YH4vlXbrC6u5VyAdv8Asz40Jj5rW5LM&dib_tag=se&keywords=vishnu+shakti+vardhak&qid=1746855202&s=hpc&sprefix=vishnu+shakti+vardhak%2Chpc%2C216&sr=1-3'">Shop now</button>
+                                <div class="explore-map-icon">
+                                    <a href="https://www.amazon.in/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0F6D32DH6" aria-label="Add to wishlist">
+                                         <i data-feather="heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-social">
+            <div class="container line">
+                <div class="margin">
+                    <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                        <h4 class="text-size-16 text-strong text-uppercase text-white">Follow Us</h4>
+                        <p class="text-size-14">
+                            <a href="https://www.facebook.com/vishnuayurvedicproducts" class="text-white hover:text-blue-400"><i class="fab fa-facebook-f text-size-30"></i> Facebook</a><br>
+                            <a href="https://www.instagram.com/vishnuayurvedicproducts" class="text-white hover:text-pink-400"><i class="fab fa-instagram text-size-30"></i> Instagram</a><br>
+                            <a href="https://www.youtube.com/@vishnuayurvedicproducts" class="text-white hover:text-red-600"><i class="fab fa-youtube text-size-30"></i> YouTube</a>
+                        </p>
+                    </div>
+                    <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                        <h4 class="text-size-16 text-strong text-uppercase text-white">E-commerce Platforms</h4>
+                        <p class="text-size-14">
+                            <a href="https://www.amazon.in/stores/VishnuAyurvedicProducts/homepage/ref=ast_amz_global_dir?ascsubtag=srch%7C6603674551492694301%7C&store_ref=bl_ast_amz_global_dir&storeId=A21O90C40F624I" class="text-white hover:text-orange-400">Amazon.in</a><br>
+                            </p>
+                    </div>
+                    <div class="s-12 m-12 l-4">
+                        <h4 class="text-size-16 text-strong text-uppercase text-white">Contact Us</h4>
+                        <p class="text-size-14">
+                            <i class="fa fa-phone text-size-30"></i> <a href="tel:+919837440038" class="text-white hover:underline">+91 9837440038</a><br>
+                            <i class="fa fa-envelope text-size-30"></i> <a href="mailto:vishnuayurvedicproducts@gmail.com" class="text-white hover:underline">vishnuayurvedicproducts@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer padding text-white">
+            <div class="container line">
+                <div class="s-12 m-12 l-12 text-center">
+                    <p class="text-size-12">Copyright 2024, Vishnu Ayurvedic Products</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+
+        // Get the search input element
+        const searchInput = document.getElementById('medicineSearch');
+        // Get the container of the product items
+        const productGrid = document.getElementById('productGrid');
+        // Get all the individual product item divs
+        const productItems = productGrid.getElementsByClassName('single-explore-item');
+
+        // Add an event listener to the search input for 'keyup' event
+        // This function will run every time the user types or releases a key
+        searchInput.addEventListener('keyup', function() {
+            // Get the current value of the search input, convert to lowercase for case-insensitive search
+            const filter = searchInput.value.toLowerCase();
+
+            // Loop through all the product item divs
+            for (let i = 0; i < productItems.length; i++) {
+                // Get the text content of the product title within the current item
+                // We target the h2 and then the text content of the anchor tag inside it
+                const itemTitleElement = productItems[i].querySelector('.single-explore-txt h2 a');
+                let itemText = '';
+                if (itemTitleElement) {
+                    itemText = itemTitleElement.textContent.toLowerCase();
+                }
+
+                // Check if the product title includes the search filter text
+                if (itemText.includes(filter)) {
+                    // If it includes the filter text, display the product item
+                    productItems[i].style.display = ''; // Use empty string to revert to default display (usually block or flex)
+                } else {
+                    // If it does not include the filter text, hide the product item
+                    productItems[i].style.display = 'none';
+                }
+            }
+        });
+
+        // Optional: Add click listeners to the product items if needed for other interactions
+        // The links within the items (like the Shop now button or product title link) will work by default.
+        // This listener could be used for clicking the entire card area if it didn't contain specific links.
+        productGrid.addEventListener('click', function(event) {
+            const clickedItem = event.target.closest('.single-explore-item'); // Find the closest parent with class single-explore-item
+            if (clickedItem) {
+                // You can add specific actions here if needed, e.g., navigate to a product detail page
+                // For now, the links and buttons within the item handle navigation.
+                console.log('Clicked on item:', clickedItem.querySelector('.single-explore-txt h2 a')?.textContent);
+            }
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Directory Landing Page</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+		<!--flaticon.css-->
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--slick.css-->
+        <link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/slick-theme.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+		<!-- corosoul css link -->
+        
+		<link rel="stylesheet" href="./corosoul/carasoul.css">
+	
+	</head>
+
+
+
+<div id="header-placeholder"></div>
+
+<script>
+fetch('./header.html') // Replace 'header.html' with the path to your header file
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+    })
+    .catch(err => {
+        console.warn('Could not load header:', err);
+    });
+</script>
+
+
+<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
+			<div class="container">
+				<div class="welcome-hero-txt">
+					<h2 style="color: rgb(252, 252, 252);">Where Ancient Wisdom <br> Nurtures life </h2>
+					<p>
+					The Heart of Vishnu Ayurvedic Company Inspired by Tradition, Crafted with Nature
+					</p>
+				</div>
+
+
+				<div class="welcome-hero-serch-box">
+					<div class="welcome-hero-form">
+						<div class="single-welcome-hero-form">
+							<h3>Search Medicine</h3>
+							<form action="index.html">
+								<input type="text" placeholder="Ex: Vishnu Sugar Nashak Fat Nashak, category name" />
+							</form>
+							
+						</div>
+						</div>
+					<div class="welcome-hero-serch">
+						<button class="welcome-hero-btn" onclick="window.location.href='#'">
+							 search  <i data-feather="search"></i>
+						</button>
+					</div>
+				</div>
+ </div>
+
+		</section> <!--/. welcome-hero-->
+		<!--welcome-hero end -->
+
+		<!--list-topics start -->
+		
+		<!--list-topics end-->
+
+		<!--works start -->
+		<section id="works" class="works">
+			<div class="container">
+				<div class="section-header">
+					<br>
+					<h2>Welcome to Vishnu Ayurvedic Company</h2>
+					<p>Welcome to Vishnu Ayurvedic Company, where the ancient wisdom of Ayurveda meets the purity of nature. We are dedicated to crafting authentic Ayurvedic products using time-honored methods and the finest natural ingredients. Our formulations are a testament to the power of tradition, designed to promote balance and well-being in your life</p>
+				</div><!--/.section-header-->
+				
+               
+
+				<div class="works-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+									<i class="flaticon-lightbulb-idea"></i>
+								</div>
+								<h2><a href="#">See <span>our</span> Catalogue</a></h2>
+								<p>
+								Check out our catalogue to explore our range of Ayurvedic products, each crafted with care and expertise.Browse our wide range of authentic Ayurvedic formulations and natural care.
+								</p>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+									        <a href="./assets/catalogue/Vishnu-hindi (4).pdf" download="catalogue.pdf">read more</a>
+        
+								</button>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+									<i class="flaticon-networking"></i>
+								</div>
+								<h2><a href="#">Company<span> Journey</span></a></h2>
+								<p>
+									The journey of Vishnu Ayurvedic Company began with a deep reverence for the ancient wisdom of Ayurveda and a profound connection to the healing power of nature. 
+								</p>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+									read more
+								</button>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+									<i class="flaticon-location-on-road"></i>
+								</div>
+								<h2><a href="#">Photos <span> Galary</span> and Memories</a></h2>
+								<p>
+								 Check out our journey throught photos and memories. We are proud to share the moments that have shaped our commitment to Ayurveda and wellness. 
+								</p>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+									read more
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+		
+		</section><!--/.works-->
+		<!--works end -->
+
+		
+<!-- corosoul stared hear -->
+<div class="carousel-container">
+	<div class="carousel-slide fade">
+		<img src="./assets/images/counter/kayacorosol.jpg" alt="Image 1">
+	</div>
+
+	<div class="carousel-slide fade">
+		<img src="./assets/images/counter/paincorsol.jpg" alt="Image 2">
+	</div>
+
+	<div class="carousel-slide fade">
+		<img src="./assets/images/counter/counter-banner.jpg" alt="Image 3">
+	</div>
+
+	<div class="carousel-slide fade">
+		<img src="./assets/images/counter/counter-banner.jpg" alt="Image 4">
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class="dots-container">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- corosoul end here -->
+
+		<!--explore start -->
+		<section id="explore" class="explore">
+			<div class="container">
+				<div class="section-header">
+					<h2>explore</h2>
+					<p>Checkout our Product which is 100% authentic and Ayurvedic</p>
+				</div><!--/.section-header-->
+
+
+				<div class="explore-content">
+					<div class="row">
+						<div class=" col-md-4 col-sm-6">
+							<div class="single-explore-item">
+								<div class="single-explore-img">
+									<img src="./assets/images/explore/sugarnashak.jpg" alt="explore image">
+									<div class="single-explore-img-info">
+										<button onclick="window.location.href='#'">best rated</button>
+										
+									</div>
+								</div>
+								<div class="single-explore-txt bg-theme-1">
+									<h2><a href="#">Vishnu Sugar Nashak</a></h2>
+									<p class="explore-rating-price">
+										<span class="explore-rating">5.0</span>
+										<a href="#"> 10 ratings</a> 
+										<span class="explore-price-box">
+											form
+											<span class="explore-price"> ₹1,095</span>
+										</span>
+										 <a href="#">Powder</a>
+									</p>
+									<div class="explore-person">
+										<div class="row">
+											<div class="col-sm-2">
+												<div class="explore-person-img">
+													<a href="#">
+														<img src="assets/images/explore/person.png" alt="explore person">
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-10">
+												<p>
+													"Good product to control diabetes . And no side-effects like weight loss because all diabetic medicine reduce weight. And helps in control infections."
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="explore-open-close-part">
+										<div class="row">
+											<div class="col-sm-5">
+												<button class="close-btn" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Ayurvedic-Management/dp/B0D76W1JRH/ref=sr_1_1?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-1&th=1'">Shop now</button>
+											</div>
+											<div class="col-sm-7">
+												<div class="explore-map-icon">
+													<!-- <a href="#"><i data-feather="map-pin"></i></a>
+													<a href="#"><i data-feather="upload"></i></a> -->
+													<a href="https://www.amazon.in/review/create-review/?channel=glance-detail&asin=B0D76W1JRH&ie=UTF8&"><i data-feather="heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-explore-item">
+								<div class="single-explore-img">
+									<img src="assets/images/explore/fatnashak.jpg" alt="explore image">
+									<div class="single-explore-img-info">
+										<button onclick="window.location.href='#'">Best rated</button>
+										
+									</div>
+								</div>
+								<div class="single-explore-txt bg-theme-2">
+									<h2><a href="#">Vishnu </a></h2>
+									<p class="explore-rating-price">
+										<span class="explore-rating">4.5</span>
+										<a href="#"> 8 ratings</a> 
+										<span class="explore-price-box">
+											form
+											<span class="explore-price">₹1,800</span>
+										</span>
+										 <a href="#"> Powder</a>
+									</p>
+									<div class="explore-person">
+										<div class="row">
+											<div class="col-sm-2">
+												<div class="explore-person-img">
+													<a href="#">
+														<img src="assets/images/explore/person.png" alt="explore person">
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-10">
+												<p>
+													"Vishnu Fatnashak has truly helped me in my weight management journey. I've noticed a significant difference in my energy levels and a reduction in cravings." 
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="explore-open-close-part">
+										<div class="row">
+											<div class="col-sm-5">
+												<button class="close-btn open-btn" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Anti-Oxidants-Management/dp/B0D7S8KCHW/ref=sr_1_5?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-5&th=1'">Shop now</button>
+											</div>
+											<div class="col-sm-7">
+												<div class="explore-map-icon">
+													<!-- <a href="#"><i data-feather="map-pin"></i></a>
+													<a href="#"><i data-feather="upload"></i></a> -->
+													<a href="https://www.amazon.in/review/create-review/edit?ie=UTF8&channel=glance-detail&asin=B0D7S8KCHW"><i data-feather="heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-explore-item">
+								<div class="single-explore-img">
+									<img src="assets/images/explore/painoil.jpeg" alt="explore image">
+									<div class="single-explore-img-info">
+										<button onclick="window.location.href='#'">best rated</button>
+										<div class="single-explore-image-icon-box">
+											<ul>
+												<li>
+													<div class="single-explore-image-icon">
+														<i class="fa fa-arrows-alt"></i>
+													</div>
+												</li>
+												<li>
+													<div class="single-explore-image-icon">
+														<i class="fa fa-bookmark-o"></i>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="single-explore-txt bg-theme-3">
+									<h2><a href="#">Vishnu Dard Nashak</a></h2>
+									<p class="explore-rating-price">
+										<span class="explore-rating">5.0</span>
+										<a href="#"> 15 ratings</a> 
+										<span class="explore-price-box">
+											form
+											<span class="explore-price">₹400</span>
+										</span>
+										 <a href="#">Oil</a>
+									</p>
+									<div class="explore-person">
+										<div class="row">
+											<div class="col-sm-2">
+												<div class="explore-person-img">
+													<a href="#">
+														<img src="assets/images/explore/person.png" alt="explore person">
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-10">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua we are going to change it by the way.... 
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="explore-open-close-part">
+										<div class="row">
+											<div class="col-sm-5">
+												<button class="close-btn" onclick="window.location.href='https://www.amazon.in/VISHNU-SUGAR-NASHAK-Ayurvedic-Shoulder/dp/B0D7SQNSCS/ref=sr_1_4?dib=eyJ2IjoiMSJ9.3-abHA_xtgrbvG5T6em_NHl1zQkYeNpWzEIJ4tfB4iiHoVEq10Sm6G0LS5f0MY_mhUD7zOYu0yzz96KoLFqxt6Srvc0E458Xqo-ljVcYJqJiAVWQ2acoAVc5kzbilivYbDgSEKYUI0_FUO7tvO4Htk-G8igEBmMmaD22XzsibXI_kVuHhnQr_RaCRLfNl_6bdq4xQtclbtX5a3hYiD6OrOH5zvejaQx9AVOuq9hEQ2sWY-JeFoUhbITzL40PQdb68uFKyqytOD36rssc0PZ2niRQLdIgQUcFwlP5DoMVK0uHJG-LT_9_10Eu4GDnW8e9EhhudBEk10Kj4iUbwZ89a_B5SICm3hJZeHNgLZh9Dqw.mSRgy-zto5oMH0dnaSySFVc_py1QK_rnaJPKqSjJz1I&dib_tag=se&keywords=vishnu%2Bsugar%2Bnashak&qid=1735825879&s=hpc&sr=1-4&th=1'">Shop Now</button>
+											</div>
+											<div class="col-sm-7">
+												<a href="https://www.amazon.in/review/create-review/edit?ie=UTF8&channel=glance-detail&asin=B0D7S8KCHW"><i data-feather="heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/.container-->
+
+		</section><!--/.explore-->
+		<!--explore end -->
+
+		<section class="centered-button-section py-4">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<a href="./category.html" class="center-button">Explore More Products</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="reviews" class="reviews">
+			<div class="section-header">
+				<h2>clients reviews</h2>
+				<p>What our client say about us</p>
+			</div><!--/.section-header-->
+			<div class="reviews-content">
+				<div class="testimonial-carousel">
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c2.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Shiv Pal</h2>
+									<h4>Delhi,India</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Good product to control diabetes . And no side-effects like weight loss because all diabetic medicine reduce weight. And helps in control infections.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c2.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Jasbir</h2>
+									<h4>Punjab India</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c3.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Krishnakant Bhardwaj</h2>
+									<h4>Bulandsahar, Uttar pradesh</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c4.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Vishal Yadav</h2>
+									<h4>Varanasi,UP</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c1.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Vivek Yadav</h2>
+									<h4>Chandauli, UP</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c2.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>monirul islam</h2>
+									<h4>london, UK</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c3.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Shohrab Hossain</h2>
+									<h4>london, UK</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c4.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Tom Leakar</h2>
+									<h4>london, UK</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				</div>
+			</div>
+
+		</section><!--/.reviews-->
+		<!--reviews end -->
+
+		<!-- statistics strat -->
+		<section id="statistics"  class="statistics">
+			<div class="container">
+				<div class="statistics-counter"> 
+					<div class="col-md-3 col-sm-6">
+						<div class="single-ststistics-box">
+							<div class="statistics-content">
+								<div class="counter">90 </div> <span>K+</span>
+							</div><!--/.statistics-content-->
+							<h3>listings</h3>
+						</div><!--/.single-ststistics-box-->
+					</div><!--/.col-->
+					<div class="col-md-3 col-sm-6">
+						<div class="single-ststistics-box">
+							<div class="statistics-content">
+								<div class="counter">40</div> <span>k+</span>
+							</div><!--/.statistics-content-->
+							<h3>listing categories</h3>
+						</div><!--/.single-ststistics-box-->
+					</div><!--/.col-->
+					<div class="col-md-3 col-sm-6">
+						<div class="single-ststistics-box">
+							<div class="statistics-content">
+								<div class="counter">65</div> <span>k+</span>
+							</div><!--/.statistics-content-->
+							<h3>visitors</h3>
+						</div><!--/.single-ststistics-box-->
+					</div><!--/.col-->
+					<div class="col-md-3 col-sm-6">
+						<div class="single-ststistics-box">
+							<div class="statistics-content">
+								<div class="counter">50</div> <span>k+</span>
+							</div><!--/.statistics-content-->
+							<h3>happy clients</h3>
+						</div><!--/.single-ststistics-box-->
+					</div><!--/.col-->
+				</div><!--/.statistics-counter-->	
+			</div><!--/.container-->
+
+		</section><!--/.counter-->	
+		<!-- statistics end -->
+
+		<!--blog start -->
+		<section id="blog" class="blog" >
+			<div class="container">
+				<div class="section-header">
+					<h2>news and articles</h2>
+					<p>Always upto date with our latest News and Articles </p>
+				</div><!--/.section-header-->
+				<div class="blog-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/blog1.jpg" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/reviving-ancient-healing-how-ayurveda-heals-modern-health-challenges/articleshow/114496593.cms">Importance of Ayurveda in Daily life</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a>Jan 2020</h4>
+									<p>
+										Ayurveda offers personalized guidance for diet and lifestyle, promoting balance and preventing disease.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/blog2.jpg" alt="blog image" style="width: 370px; height: 200px;">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="https://newsinhealth.nih.gov/2017/05/keeping-your-gut-check">The Importance of Gut Health </a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2024</h4>
+									<p>
+										Keeping Your Gut in Check Healthy Options to Stay on Tract and know the importance of Gut Health on overall wee=ll beeing.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/blog3.jpg" alt="blog image" style="width: 350px; height: 200px;">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="https://www.bbc.com/travel/article/20240417-ayurveda-indias-ancient-tradition-that-aligns-mind-body-and-spirit">India's ancient tradition</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2025</h4>
+									<p>
+										India's ancient tradition that aligns mind, body and spirit – and where to experience it.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+			
+		</section><!--/.blog-->
+		<!--blog end -->
+
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+					 Get in touch with us 
+					</h2>
+					
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#">
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here">
+								<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+									create account
+								</button>
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+
+		<!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="footer-menu">
+		           	<div class="row">
+			           	<div class="col-sm-3">
+			           		 <div class="navbar-header">
+				                <a class="navbar-brand" href="index.html">Vishnu<span>Ayurvedic Company</span></a>
+				            </div><!--/.navbar-header-->
+			           	</div>
+			           	<!-- <div class="col-sm-9">
+			           		<ul class="footer-menu-item">
+			                    <li class="scroll"><a href="#works">how it works</a></li>
+			                    <li class="scroll"><a href="#explore">explore</a></li>
+			                    <li class="scroll"><a href="#reviews">review</a></li>
+			                    <li class="scroll"><a href="#blog">blog</a></li>
+			                    <li class="scroll"><a href="#contact">contact</a></li>
+			                    <li class=" scroll"><a href="#contact">my account</a></li>
+			                </ul><!--/.nav -->
+			           	</div> -->
+		           </div>
+				</div>
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by CyberAdAPT
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<span><i class="fa fa-phone"> +91-9675731144</i></span>
+								<a href="https://www.facebook.com/Ayurvedicdiabetescure"><i class="fa fa-facebook"></i></a>	
+								<a href="https://x.com/vishnuayurvedic"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="https://www.instagram.com/vishnuayurvedicofficial/"><i class="fa fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
+		<!--footer end-->
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+        <!--feather.min.js-->
+        <script  src="assets/js/feather.min.js"></script>
+
+        <!-- counter js -->
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+
+        <!--slick.min.js-->
+        <script src="assets/js/slick.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		     
+        <!--Custom JS-->
+        <script src="assets/js/custom.js"></script>
+
+
+		<!-- corosoul logic  -->
+         
+		<script src="./corosoul/corosoul.js"></script>
+
+
+
+    </body>
+	
+</html>
