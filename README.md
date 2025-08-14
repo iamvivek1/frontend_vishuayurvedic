@@ -73,30 +73,25 @@ Visit our website to see the live version: [Vishnu Ayurvedic Company](https://ia
 
 ## 📸 Screenshots
 
-### Desktop View
-![Homepage Hero Section](screenshots/homepage-hero.png)
-*Hero section with search functionality*
+### Website Preview
+![Website Screenshot 1](screenshots/Screenshot%20(100).png)
+*Homepage hero section and navigation*
 
-![Product Showcase](screenshots/homepage-products.png)
-*Featured Ayurvedic products section*
+![Website Screenshot 2](screenshots/Screenshot%20(101).png)
+*Product showcase and features*
 
-![Image Carousel](screenshots/homepage-carousel.png)
-*Interactive product carousel*
+![Website Screenshot 3](screenshots/Screenshot%20(102).png)
+*Customer reviews and testimonials*
 
-![Customer Reviews](screenshots/homepage-reviews.png)
-*Customer testimonials and ratings*
+### Key Features Showcase
+- ✅ **Responsive Design** - Works on all devices
+- ✅ **Modern UI/UX** - Clean and professional layout
+- ✅ **Interactive Elements** - Carousels, buttons, and forms
+- ✅ **Product Gallery** - Beautiful product displays
+- ✅ **Customer Reviews** - Social proof and testimonials
+- ✅ **Contact Forms** - Easy customer engagement
 
-### Mobile & Tablet Views
-<div align="center">
-  <img src="screenshots/mobile-view.png" alt="Mobile View" width="300"/>
-  <img src="screenshots/tablet-view.png" alt="Tablet View" width="400"/>
-</div>
-
-### Full Page Preview
-![Full Homepage](screenshots/homepage-full.png)
-*Complete homepage layout*
-
-> **Note**: Screenshots will be added once the website is deployed. You can add your own screenshots to the `screenshots/` folder.
+> **Want to add more screenshots?** Check the `screenshots/` folder for guidelines and templates.
 
 ## 📱 Responsive Design
 
