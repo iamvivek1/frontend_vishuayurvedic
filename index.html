@@ -14,59 +14,68 @@
         <!-- title of site -->
         <title>Directory Landing Page</title>
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+        <!-- For favicon png - File doesn't exist -->
+		<!-- <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/> -->
        
         <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        <!--linear icon css-->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
+        <!--linear icon css - File doesn't exist -->
+		<!-- <link rel="stylesheet" href="assets/css/linearicons.css"> -->
 
 		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-		<!--flaticon.css-->
-        <link rel="stylesheet" href="assets/css/flaticon.css">
+		<!--flaticon.css - File doesn't exist -->
+        <!-- <link rel="stylesheet" href="assets/css/flaticon.css"> -->
 
-		<!--slick.css-->
-        <link rel="stylesheet" href="assets/css/slick.css">
-		<link rel="stylesheet" href="assets/css/slick-theme.css">
+		<!--slick.css - Files don't exist -->
+        <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
+		<!-- <link rel="stylesheet" href="assets/css/slick-theme.css"> -->
 		
         <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+		<!-- bootsnav - Files don't exist -->
+		<!-- <link rel="stylesheet" href="assets/css/bootsnav.css"> -->
         
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <!--style.css - File doesn't exist -->
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <!--responsive.css - File doesn't exist -->
+        <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
 		<!-- corosoul css link -->
         
 		<link rel="stylesheet" href="./corosoul/carasoul.css">
+		
+		<!-- vishnugallery CSS files -->
+		<link rel="stylesheet" href="./vishnugallery/css/components.css">
+		<link rel="stylesheet" href="./vishnugallery/css/icons.css">
+		<link rel="stylesheet" href="./vishnugallery/css/lightcase.css">
+		<link rel="stylesheet" href="./vishnugallery/css/template-style.css">
+		
+		<!-- owl-carousel CSS files -->
+		<link rel="stylesheet" href="./vishnugallery/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="./vishnugallery/owl-carousel/owl.theme.css">
 	
 	</head>
+	
+	<body>
+		<!-- Header placeholder -->
+		<div id="header-placeholder"></div>
 
+		<script>
+		fetch('./header.html') // Replace 'header.html' with the path to your header file
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById('header-placeholder').innerHTML = html;
+			})
+			.catch(err => {
+				console.warn('Could not load header:', err);
+			});
+		</script>
 
-
-<div id="header-placeholder"></div>
-
-<script>
-fetch('./header.html') // Replace 'header.html' with the path to your header file
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-    })
-    .catch(err => {
-        console.warn('Could not load header:', err);
-    });
-</script>
-
-
-<!--welcome-hero start -->
+		<!--welcome-hero start -->
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
@@ -169,15 +178,15 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 <!-- corosoul stared hear -->
 <div class="carousel-container">
 	<div class="carousel-slide fade">
-		<img src="./assets/images/counter/kayacorosol.jpg" alt="Image 1">
+		<img src="https://via.placeholder.com/800x400/4CAF50/white?text=Kaya+Carousel" alt="Image 1">
 	</div>
 
 	<div class="carousel-slide fade">
-		<img src="./assets/images/counter/paincorsol.jpg" alt="Image 2">
+		<img src="https://via.placeholder.com/800x400/FF9800/white?text=Pain+Relief" alt="Image 2">
 	</div>
 
 	<div class="carousel-slide fade">
-		<img src="./assets/images/counter/counter-banner.jpg" alt="Image 3">
+		<img src="https://via.placeholder.com/800x400/2196F3/white?text=Ayurvedic+Products" alt="Image 3">
 	</div>
 
 	<div class="carousel-slide fade">
@@ -216,7 +225,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class=" col-md-4 col-sm-6">
 							<div class="single-explore-item">
 								<div class="single-explore-img">
-									<img src="./assets/images/explore/sugarnashak.jpg" alt="explore image">
+									<img src="https://via.placeholder.com/300x200/4CAF50/white?text=Sugar+Nashak" alt="explore image">
 									<div class="single-explore-img-info">
 										<button onclick="window.location.href='#'">best rated</button>
 										
@@ -238,7 +247,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 											<div class="col-sm-2">
 												<div class="explore-person-img">
 													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
+														<img src="https://via.placeholder.com/50x50/607D8B/white?text=👤" alt="explore person">
 													</a>
 												</div>
 											</div>
@@ -269,7 +278,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="col-md-4 col-sm-6">
 							<div class="single-explore-item">
 								<div class="single-explore-img">
-									<img src="assets/images/explore/fatnashak.jpg" alt="explore image">
+									<img src="https://via.placeholder.com/300x200/FF9800/white?text=Fat+Nashak" alt="explore image">
 									<div class="single-explore-img-info">
 										<button onclick="window.location.href='#'">Best rated</button>
 										
@@ -291,7 +300,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 											<div class="col-sm-2">
 												<div class="explore-person-img">
 													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
+														<img src="https://via.placeholder.com/50x50/607D8B/white?text=👤" alt="explore person">
 													</a>
 												</div>
 											</div>
@@ -322,7 +331,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="col-md-4 col-sm-6">
 							<div class="single-explore-item">
 								<div class="single-explore-img">
-									<img src="assets/images/explore/painoil.jpeg" alt="explore image">
+									<img src="https://via.placeholder.com/300x200/9C27B0/white?text=Pain+Oil" alt="explore image">
 									<div class="single-explore-img-info">
 										<button onclick="window.location.href='#'">best rated</button>
 										<div class="single-explore-image-icon-box">
@@ -357,13 +366,13 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 											<div class="col-sm-2">
 												<div class="explore-person-img">
 													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
+														<img src="https://via.placeholder.com/50x50/607D8B/white?text=👤" alt="explore person">
 													</a>
 												</div>
 											</div>
 											<div class="col-sm-10">
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua we are going to change it by the way.... 
+													"This pain relief oil has been incredibly effective for my joint pain. I've been using it for months and the results are amazing!" 
 												</p>
 											</div>
 										</div>
@@ -409,7 +418,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c2.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/4CAF50/white?text=SP" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Shiv Pal</h2>
@@ -434,7 +443,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c2.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/FF9800/white?text=J" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Jasbir</h2>
@@ -459,7 +468,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c3.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/2196F3/white?text=KB" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Krishnakant Bhardwaj</h2>
@@ -484,7 +493,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c4.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/9C27B0/white?text=VY" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Vishal Yadav</h2>
@@ -509,7 +518,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c1.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/607D8B/white?text=VY" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Vivek Yadav</h2>
@@ -534,7 +543,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c2.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/795548/white?text=MI" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>monirul islam</h2>
@@ -559,7 +568,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c3.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/E91E63/white?text=SH" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Shohrab Hossain</h2>
@@ -584,7 +593,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="testimonial-description">
 							<div class="testimonial-info">
 								<div class="testimonial-img">
-									<img src="assets/images/clients/c4.png" alt="clients">
+									<img src="https://via.placeholder.com/80x80/3F51B5/white?text=TL" alt="clients">
 								</div><!--/.testimonial-img-->
 								<div class="testimonial-person">
 									<h2>Tom Leakar</h2>
@@ -665,7 +674,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="col-md-4 col-sm-6">
 							<div class="single-blog-item">
 								<div class="single-blog-item-img">
-									<img src="assets/images/blog/blog1.jpg" alt="blog image">
+									<img src="https://via.placeholder.com/370x200/4CAF50/white?text=Ayurveda+Daily+Life" alt="blog image">
 								</div>
 								<div class="single-blog-item-txt">
 									<h2><a href="https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/reviving-ancient-healing-how-ayurveda-heals-modern-health-challenges/articleshow/114496593.cms">Importance of Ayurveda in Daily life</a></h2>
@@ -679,7 +688,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="col-md-4 col-sm-6">
 							<div class="single-blog-item">
 								<div class="single-blog-item-img">
-									<img src="assets/images/blog/blog2.jpg" alt="blog image" style="width: 370px; height: 200px;">
+									<img src="https://via.placeholder.com/370x200/FF9800/white?text=Gut+Health" alt="blog image" style="width: 370px; height: 200px;">
 								</div>
 								<div class="single-blog-item-txt">
 									<h2><a href="https://newsinhealth.nih.gov/2017/05/keeping-your-gut-check">The Importance of Gut Health </a></h2>
@@ -693,7 +702,7 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 						<div class="col-md-4 col-sm-6">
 							<div class="single-blog-item">
 								<div class="single-blog-item-img">
-									<img src="assets/images/blog/blog3.jpg" alt="blog image" style="width: 350px; height: 200px;">
+									<img src="https://via.placeholder.com/350x200/2196F3/white?text=Ancient+Tradition" alt="blog image" style="width: 350px; height: 200px;">
 								</div>
 								<div class="single-blog-item-txt">
 									<h2><a href="https://www.bbc.com/travel/article/20240417-ayurveda-indias-ancient-tradition-that-aligns-mind-body-and-spirit">India's ancient tradition</a></h2>
@@ -792,35 +801,39 @@ fetch('./header.html') // Replace 'header.html' with the path to your header fil
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-		<script src="assets/js/jquery.js"></script>
+		<!-- jQuery from CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		
 		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
+		<!--feather.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
 
-        <!--feather.min.js-->
-        <script  src="assets/js/feather.min.js"></script>
-
-        <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-
-        <!--slick.min.js-->
-        <script src="assets/js/slick.min.js"></script>
-
+		<!-- jQuery easing -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		     
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
+		
+		<!-- Note: The following JS files don't exist in the project -->
+        <!-- <script src="assets/js/bootsnav.js"></script> -->
+        <!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
+		<!-- <script src="assets/js/waypoints.min.js"></script> -->
+        <!-- <script src="assets/js/slick.min.js"></script> -->
+        <!-- <script src="assets/js/custom.js"></script> -->
 
 
+		<!-- vishnugallery JS files (excluding duplicate jQuery) -->
+		<script src="./vishnugallery/js/jquery-ui.min.js"></script>
+		<script src="./vishnugallery/js/jquery.events.touch.js"></script>
+		<script src="./vishnugallery/js/responsee.js"></script>
+		<script src="./vishnugallery/js/template-scripts.js"></script>
+		
+		<!-- owl-carousel JS file -->
+		<script src="./vishnugallery/owl-carousel/owl.carousel.js"></script>
+		
 		<!-- corosoul logic  -->
-         
 		<script src="./corosoul/corosoul.js"></script>
 
 
