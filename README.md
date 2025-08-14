@@ -33,6 +33,9 @@ vishayurvedi_web/
 ├── index.html              # Main homepage
 ├── about.html              # About page
 ├── category.html           # Product categories
+├── screenshots/            # Website screenshots
+│   ├── README.md          # Screenshot guidelines
+│   └── .gitkeep           # Placeholder for Git tracking
 ├── corosoul/              # Custom carousel components
 │   ├── carasoul.css
 │   ├── corosoul.html
@@ -42,6 +45,9 @@ vishayurvedi_web/
 │   ├── js/                # JavaScript files
 │   ├── font/              # Icon fonts
 │   └── owl-carousel/      # Carousel library
+├── .github/workflows/     # GitHub Actions
+│   └── deploy.yml         # Auto-deployment workflow
+├── .gitignore             # Git ignore rules
 └── README.md              # Project documentation
 ```
 
@@ -64,6 +70,33 @@ vishayurvedi_web/
 ## 🌐 Live Demo
 
 Visit our website to see the live version: [Vishnu Ayurvedic Company](https://iamvivek1.github.io/frontend_vishuayurvedic/)
+
+## 📸 Screenshots
+
+### Desktop View
+![Homepage Hero Section](screenshots/homepage-hero.png)
+*Hero section with search functionality*
+
+![Product Showcase](screenshots/homepage-products.png)
+*Featured Ayurvedic products section*
+
+![Image Carousel](screenshots/homepage-carousel.png)
+*Interactive product carousel*
+
+![Customer Reviews](screenshots/homepage-reviews.png)
+*Customer testimonials and ratings*
+
+### Mobile & Tablet Views
+<div align="center">
+  <img src="screenshots/mobile-view.png" alt="Mobile View" width="300"/>
+  <img src="screenshots/tablet-view.png" alt="Tablet View" width="400"/>
+</div>
+
+### Full Page Preview
+![Full Homepage](screenshots/homepage-full.png)
+*Complete homepage layout*
+
+> **Note**: Screenshots will be added once the website is deployed. You can add your own screenshots to the `screenshots/` folder.
 
 ## 📱 Responsive Design
 
@@ -114,11 +147,26 @@ All dependencies are loaded via CDN:
 
 ## 🤝 Contributing
 
+### Code Contributions
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+### Adding Screenshots
+1. Take high-quality screenshots of the website
+2. Save them in the `screenshots/` folder with descriptive names
+3. Update the README.md to reference new screenshots
+4. Follow the naming convention in `screenshots/README.md`
+5. Submit a pull request with your screenshots
+
+### Screenshot Guidelines
+- Use consistent browser and device sizes
+- Capture different sections and responsive views
+- Ensure good lighting and clarity
+- Include both desktop and mobile views
+- Name files descriptively (e.g., `hero-section-desktop.png`)
 
 ## 📄 License
 
